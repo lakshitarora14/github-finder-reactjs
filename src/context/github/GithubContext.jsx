@@ -19,6 +19,8 @@ export const GithubProvider = ({ children }) => {
       type: 'SET_LOADING',
     })
   }
+
+  // not using this in our project .. it was only for testing and setup
   const fetchUsers = async () => {
     setLoading()
     const response = await fetch(`${GITHUB_URL}/users`, {
