@@ -20,6 +20,11 @@ export const GithubProvider = ({ children }) => {
     })
   }
 
+  const clearUsers = () => {
+    dispatch({
+      type: 'CLEAR_USERS',
+    })
+  }
   // search users
   const searchUsers = async (text) => {
     setLoading()
@@ -65,6 +70,7 @@ export const GithubProvider = ({ children }) => {
         users: state.users,
         loading: state.loading,
         searchUsers,
+        clearUsers,
         // fetchUsers,
       }}
     >
